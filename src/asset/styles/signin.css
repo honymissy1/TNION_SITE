@@ -1,0 +1,91 @@
+.signin{
+   background-image: url('../images/wavy.svg');
+    width: 100%;
+    /* min-height: 100vh; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+}
+
+.signin h1{
+    margin-top: 0px;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.signin h2{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.signin-label{
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.signin div{
+    padding: 40px;
+    width: 500px;
+    /* border: 1.5px solid; */
+    height: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+form input:not([type=submit]){
+    width: 100%;
+    padding: 5px;
+    border: 1.5px solid rgb(155, 148, 148);
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#submit {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #3BEF78;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 10px
+}
+
+#submit:focus{
+    outline: none
+}
+
+
+form label{
+    font-size: 20px;
+}
+
+form p{
+    color: white
+}
+
+
+@media screen and (max-width: 500px) {
+    .signin{
+
+        background-position: top left;
+         width: 100%;
+         min-height: 100vh;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+
+     .signin div{
+        width: 100%;
+        padding: 20px;
+     }
+
+     .signin h1{
+        padding:  20px;
+        font-size: 30px;
+        color: rgb(71, 71, 71)
+     }
+}

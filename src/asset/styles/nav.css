@@ -1,0 +1,101 @@
+.nav {
+    height: auto;
+    padding: 20px;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 1px 1px 10px black;
+  }
+
+ 
+  
+  
+  .group{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid; */
+    max-width: 100%;
+    /* width: 500px; */
+    gap: 20px;
+  }
+  
+  .group a button{
+    border: 2px solid #04FF0E;
+    height: 100%;
+    color: black;
+    width: fit-content;
+    border-radius: 5px;
+    background: white;
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 10px
+  }
+
+
+  ul{
+    list-style: none;
+    display: flex;
+    width: 400px;
+    /* flex: 1; */
+    /* border: 1px solid; */
+    justify-content: center;
+    flex-wrap: wrap
+  }
+
+  ul a{
+    margin: 0 20px;
+    padding: 10px 0px;
+  }
+  
+  .search{
+    border: 1.5px solid rgb(102, 85, 85);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    flex: 2;
+  }
+  
+  .search input{
+    border: none;
+  }
+  
+  .search input:focus{
+    outline: none;
+  }
+
+  .welcome{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+
+  @media screen and (max-width: 800px) {
+    .nav{
+      justify-content: center;
+      gap: 30px
+    }
+    .welcome{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+
+    .group{
+      width: 100%;
+      flex-wrap: wrap;
+      /* flex: 1; */
+    }
+    
+  }
