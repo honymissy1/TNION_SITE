@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-// import BlogImg from '../asset/images/blog-img.jpg'
 import AdminPost from './admin-post'
 const Blog = ({link, header, file, like, date, filetype}) => {
     return (
@@ -11,12 +10,12 @@ const Blog = ({link, header, file, like, date, filetype}) => {
                 filetype === 'image' ? 
                 (
                   <div className="blog-img"> 
-                   <img src={`http://localhost:3001/uploads/${file}`}  alt="Images from the server" />
+                   <img src={`/uploads/${file}`}  alt="Images from the server" />
                   </div>
                  ) : filetype === 'video' ?
                  (
                   <div className="blog-img"> 
-                    <video src={`http://localhost:3001/uploads/${file}`} alt="Video from server"></video>
+                    <video src={`/uploads/${file}`} alt="Video from server"></video>
                   </div>
                 ) : (<div className="blog-img" style={{display: 'none'}}></div>)
               }
