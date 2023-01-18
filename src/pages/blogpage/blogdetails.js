@@ -76,7 +76,7 @@ const BlogDetails = () => {
                 <div className="comment">
                     {
                         
-                        username.user ?
+                        username.user.email ?
                         (
                             <div className="post-comment">
                                 <textarea placeholder="Add Comment" ref={commentRef} style={{width: "100%", height: '100px',padding: '20px', fontSize:"20px", marginTop: "40px"}}></textarea>

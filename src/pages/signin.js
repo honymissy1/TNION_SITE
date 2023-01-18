@@ -1,7 +1,7 @@
 import { Link, useNavigate} from 'react-router-dom';
 import '../asset/styles/nav.css';
 import '../asset/styles/signin.css';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useContextHook from ".././Hooks/contestHook";
 
 
@@ -10,6 +10,7 @@ const Signin = () =>{
     const {userLogin} = useContextHook();
     const emailRef = useRef();
     const passwordRef = useRef();
+    const [err, setErr] = useState('')
 
     const navigate = useNavigate()
 
@@ -31,8 +32,18 @@ const Signin = () =>{
         if(request.ok){
             userLogin(result.fullname, result.email)
             navigate('/',{replace: true})
+        }else{
+            setErr('Username / Password Invalid')
         }
     }
+
+    useEffect(() =>{
+        const email = document.querySelector('.email');
+        email.focus = () =>{
+            setErr('')
+
+        }
+    }, [emailRef])
     return (
          <div className='signin'>
 
@@ -40,8 +51,8 @@ const Signin = () =>{
             <p className='signin-label'>Signin</p>
             <div>
                 <form>
-
-                    <label>Email</label>
+                    <b className='error' style={{color: 'red'}}>{err}</b><br/>
+                    <label className='email'>Email</label>
                     <input ref={emailRef} type="text" />
 
                    
